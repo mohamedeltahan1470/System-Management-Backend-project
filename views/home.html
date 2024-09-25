@@ -4,9 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        label{
+            font-size: 20px;
+            display: block;
+            margin-bottom: 20px;
+        }
+        input{
+            font-size: 30px;
+            margin: 30px;
+        }
+        textarea{
+            font-size: 20px;
+            margin: 30px;
+        }
+        button{
+            font-size: 20px;
+            padding: 10px;
+            margin: 30px;
+        }
+    </style>
 </head>
 <body>
-    <h1 >hallow world </h1>
-    <h2>what is your name</h2>
+    
+<form action="/all-articles" method="post">
+    <label for="title">Article title</label>
+    <input type="text" id="title" name="title" required>
+ 
+ 
+    <label for="summary">Article summary</label>
+    <input type="text" id="summary" name="summary" required>
+ 
+ 
+    <label for="body">Article body</label>
+    <textarea id="body" name="body" required></textarea><br>
+ 
+ 
+    <button class="create">Create</button>
+</form>
 </body>
 </html>
