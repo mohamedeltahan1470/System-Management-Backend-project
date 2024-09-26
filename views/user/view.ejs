@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="../js/color-modes.js"></script>
+<link rel="stylesheet" href="../bootstrap-icons-1.10.5/font/bootstrap-icons.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.112.5">
+    <title>Edit page</title>
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/bootstrap-icons.min.css">
+<link rel="stylesheet" href="../css/dark-light.css">
+    <!-- Custom styles for this template -->
+    <link href="../css/sidebars.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/mystyle.css">
+  </head>
+
+
+  <body>
+    <%- include('../Components/dark-light.ejs') %>
+
+<main class="d-flex flex-nowrap">
+
+  <%- include('../Components/sidebar.ejs' , {currentPage: "view"}) %>
+
+<section class="w-100">
+  <%- include('../Components/navbar.ejs')%>
+
+
+  <nav  class="p-2 mt-4 d-flex flex-wrap justify-content-md-between " aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">mohamad Ali</li>
+    </ol>
+    <p class="mx-2 "> <span class="fw-medium">Id :</span> 8495733890239894928</p>
+  </nav>
+
+  <form class="mx-2 ">
+    <div class="row mb-3">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">First Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputEmail3">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="inputPassword3" class="col-sm-2 col-form-label">Last Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputPassword3">
+      </div>
+    </div>
+    <div class="row mb-3">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Telephone</label>
+        <div class="col-sm-10">
+          <input type="tel" class="form-control" id="inputEmail3">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" id="inputPassword3">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">male</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputEmail3">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Age</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control" id="inputPassword3">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Country</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputEmail3">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Created on</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputPassword3">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Last Update</label>
+        <div class="col-sm-10">
+          <input type="datetime" class="form-control" id="inputEmail3">
+        </div>
+      </div>
+    
+  </form>
+</section>
+
+
+</main>
+<script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/sidebars.js"></script></body>
+</html>

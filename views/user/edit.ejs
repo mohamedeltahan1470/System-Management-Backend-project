@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="../js/color-modes.js"></script>
+<link rel="stylesheet" href="../bootstrap-icons-1.10.5/font/bootstrap-icons.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.112.5">
+    <title>Edit page</title>
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/bootstrap-icons.min.css">
+<link rel="stylesheet" href="../css/dark-light.css">
+    <!-- Custom styles for this template -->
+    <link href="../css/sidebars.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/mystyle.css">
+  </head>
+
+
+  <body>
+    <%- include('../Components/dark-light.ejs') %>
+<main class="d-flex flex-nowrap">
+
+  <%- include('../Components/sidebar.ejs' , {currentPage: "edit"}) %>
+
+<section class="w-100">
+  <%- include('../Components/navbar.ejs')%>
+
+
+  <nav class="p-2 mt-4 d-flex flex-wrap justify-content-md-between " aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Mohamad Ali</li>
+    </ol>
+    <p class="mx-2 me-md-5"> <span class="fw-medium">Id :</span> 8495733890239894928</p>
+  </nav>
+
+  <form class="row mx-0 g-3">
+    <div class="col-md-6">
+      <label for="inputemail4" class="form-label">email</label>
+      <input  placeholder="a..@.." type="email" class="form-control" id="inputemail4">
+    </div>
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">Password</label>
+      <input placeholder="....." type="password" class="form-control" id="inputPassword4">
+    </div>
+    <div class="col-md-6">
+        <label for="inputFirstName4" class="form-label">FirstName</label>
+        <input  placeholder="ali.." type="text" class="form-control" id="inputFirstName4">
+      </div>
+      <div class="col-md-6">
+        <label for="inputLastName4" class="form-label">LastName</label>
+        <input placeholder="mohamad.." type="text" class="form-control" id="inputLastName4">
+      </div>
+    <div class="col-12">
+      <label for="inputAddress" class="form-label">Address</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    </div>
+    <div class="col-12">
+      <label for="inputAddress2" class="form-label">Address 2</label>
+      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    </div>
+    <div class="col-md-6">
+      <label for="inputCity" class="form-label">City</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">State</label>
+      <select id="inputState" class="form-select">
+        <option selected hidden disabled>Choose...</option>
+        <option>married</option>
+        <option>Single</option>
+      </select>
+
+    </div>
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Zip</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Updated Changes</button>
+      <button data-bs-toggle="modal" data-bs-target="#exampleModal"  type="button" class="btn btn-primary btn-danger">Delete User</button>
+    </div>
+  </form>
+
+</section>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Delete User</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to continue delete the customer ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+</main>
+<script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/sidebars.js"></script></body>
+</html>
