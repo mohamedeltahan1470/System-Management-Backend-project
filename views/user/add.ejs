@@ -28,7 +28,7 @@
 <section class="w-100">
     <%- include('../Components/navbar.ejs')%>
 
-  <form  action="#" method="post" class="row mx-0 g-3">
+  <form  action="/user/add.html" method="post" class="row mx-0 g-3">
     <div class="col-md-6">
       <label for="inputemail4" class="form-label">email</label>
       <input  placeholder="a..@.." type="email" class="form-control" id="inputemail4" name="email">
@@ -48,21 +48,23 @@
         <label for="inputLastName4" class="form-label">LastName</label>
         <input placeholder="mohamad.." type="text" class="form-control" id="inputLastName4" name="lastname">
       </div>
-  
-    <div class="col-12">
-      <label for="inputAddress" class="form-label">Address</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="">
-    </div>
 
-    <div class="col-12">
+    <div class="col-md-6">
       <label for="inputAddress2" class="form-label">Address 2</label>
       <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" name="address">
+    </div>
+
+    
+    <div class="col-md-6">
+      <label for="inputAge" class="form-label">Age</label>
+      <input type="text" class="form-control" id="inputAge" name="age">
     </div>
 
     <div class="col-md-6">
       <label for="inputCity" class="form-label">City</label>
       <input type="text" class="form-control" id="inputCity" name="country">
     </div>
+  
 
     <div class="col-md-4">
       <label for="inputState" class="form-label">State</label>
