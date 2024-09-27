@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const app = express();
 const port = 3000;
 app.use(express.urlencoded({ extended: true }));
-const Article = require("./models/mydataSchema");
+const User = require("./models/CustomerSchema");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
@@ -26,8 +26,16 @@ liveReloadServer.server.once("connection", () => {
 
 
 app.get("/", (req, res) => {
-  res.render("index");
+  console.log("------------------------------------")
+  User.find().then((result) => {
+    res.render("index" , {arr: result});
+  }).catch((err) => {
+    console.log(err)
+  })
 });
+
+
+
 app.get("/user/add.html", (req, res) => {
   res.render("user/add");
 });
@@ -53,3 +61,16 @@ mongoose
   });
 
 
+  app.post("/user/add.html", (req, res) => {
+    console.log(req.body)
+    const user = new User(req.body);
+    user.save()
+    .then( result => {
+      res.redirect("/");
+    })
+    .catch( err => {
+      console.log(err);
+    });
+
+    // res.redirect("/user/add.html")
+  });
