@@ -18,7 +18,6 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="./css/dark-light.css" />
-    <!-- Custom styles for this template -->
     <link href="css/sidebars.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/mystyle.css" />
   </head>
@@ -56,14 +55,14 @@
                 <td><%= item.gender %></td>  
                 <td><%= item.country %></td>  
                 <td><%= item.age %></td>  
-                <td><%= item.lastName %></td>   
+                <td>1 day ago</td>   
                 <td>
                   <a
                     data-bs-toggle="tooltip"
                     data-bs-title="view details"
                     data-bs-placement="top"
                     class="btn btn-primary btn-sm"
-                    href="./user/view.html"
+                    href="./user/<%= item._id %>"
                     ><i class="bi bi-eye-fill"></i></a>
                   <a
                     data-bs-toggle="tooltip"

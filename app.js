@@ -7,8 +7,6 @@ const User = require("./models/CustomerSchema");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
-
-
 //auto refresh
 const path = require("path");
 const livereload = require("livereload");
@@ -24,28 +22,35 @@ liveReloadServer.server.once("connection", () => {
   }, 100);
 });
 
-
 app.get("/", (req, res) => {
-  console.log("------------------------------------")
-  User.find().then((result) => {
-    res.render("index" , {arr: result});
-  }).catch((err) => {
-    console.log(err)
-  })
+  User.find()
+    .then((result) => {
+      res.render("index", { arr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 });
-
-
 
 app.get("/user/add.html", (req, res) => {
   res.render("user/add");
 });
-app.get("/user/view.html", (req, res) => {
-  res.render("user/view");
+
+app.get("/user/:id", (req, res) => {
+  User.findById(req.params.id)
+    .then((result) => {
+      res.render("user/view" , {obj:result});
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 });
+
+
+
 app.get("/user/edit.html", (req, res) => {
   res.render("user/edit");
 });
-
 
 mongoose
   .connect(
@@ -60,17 +65,17 @@ mongoose
     console.log(err);
   });
 
-
-  app.post("/user/add.html", (req, res) => {
-    console.log(req.body)
-    const user = new User(req.body);
-    user.save()
-    .then( result => {
+app.post("/user/add.html", (req, res) => {
+  console.log(req.body);
+  const user = new User(req.body);
+  user
+    .save()
+    .then((result) => {
       res.redirect("/");
     })
-    .catch( err => {
+    .catch((err) => {
       console.log(err);
     });
 
-    // res.redirect("/user/add.html")
-  });
+  // res.redirect("/user/add.html")
+});
