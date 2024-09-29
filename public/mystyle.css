@@ -1,0 +1,21 @@
+label{
+    color: rgb(0, 4, 254);
+}
+label {
+    font-size: 33px;
+    display: block;
+    margin-bottom: 20px;
+  }
+  input {
+    font-size: 30px;
+    margin: 30px;
+  }
+  textarea {
+    font-size: 20px;
+    margin: 30px;
+  }
+  button {
+    font-size: 33px;
+    padding: 10px;
+    margin: 30px;
+  }

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="../js/color-modes.js"></script>
+<link rel="stylesheet" href="../bootstrap-icons-1.10.5/font/bootstrap-icons.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.112.5">
+    <title>Home page</title>
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/bootstrap-icons.min.css">
+<link rel="stylesheet" href="../css/dark-light.css">
+    <!-- Custom styles for this template -->
+    <link href="../css/sidebars.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/mystyle.css">
+  </head>
+
+
+  
+  <body>
+  
+<%- include('../Components/dark-light.ejs') %>
+<main class="d-flex flex-nowrap">
+
+  <%- include('../Components/sidebar.ejs' , {currentPage: "add"}) %>
+
+<section class="w-100">
+    <%- include('../Components/navbar.ejs')%>
+
+  <form  action="/user/add.html" method="post" class="row mx-0 g-3">
+    <div class="col-md-6">
+      <label for="inputemail4" class="form-label">email</label>
+      <input  placeholder="a..@.." type="email" class="form-control" id="inputemail4" name="email">
+    </div>
+
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">Password</label>
+      <input placeholder="....." type="password" class="form-control" id="inputPassword4" name="Phonenumber"> 
+    </div>
+
+    <div class="col-md-6">
+        <label for="inputFirstName4" class="form-label">FirstName</label>
+        <input  placeholder="ali.." type="text" class="form-control" id="inputFirstName4" name="firstname">
+      </div>
+
+      <div class="col-md-6">
+        <label for="inputLastName4" class="form-label">LastName</label>
+        <input placeholder="mohamad.." type="text" class="form-control" id="inputLastName4" name="lastname">
+      </div>
+
+    <div class="col-md-6">
+      <label for="inputAddress2" class="form-label">Address 2</label>
+      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" name="address">
+    </div>
+
+    
+    <div class="col-md-6">
+      <label for="inputAge" class="form-label">Age</label>
+      <input type="text" class="form-control" id="inputAge" name="age">
+    </div>
+
+    <div class="col-md-6">
+      <label for="inputCity" class="form-label">City</label>
+      <input type="text" class="form-control" id="inputCity" name="country">
+    </div>
+  
+
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">State</label>
+      <select id="inputState" class="form-select" name="gender">
+        <option selected hidden disabled>Choose...</option>
+        <option>married</option>
+        <option>Single</option>
+      </select>
+
+    </div>
+
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Zip</label>
+      <input type="text" class="form-control" id="inputZip" name="zip">
+    </div>
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    
+  </form>
+</section>
+
+</main>
+<script src="../js/bootstrap.bundle.min.js"></script>
+
+    <script src="../js/sidebars.js"></script>
+</body>
+</html>
