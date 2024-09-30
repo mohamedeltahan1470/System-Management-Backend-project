@@ -55,29 +55,33 @@
                 <td><%= item.gender %></td>  
                 <td><%= item.country %></td>  
                 <td><%= item.age %></td>  
-                <td>1 day ago</td>   
+                <td><%= moment(item.UpdatedAt).fromNow() %></td>   
                 <td>
                   <a
                     data-bs-toggle="tooltip"
                     data-bs-title="view details"
                     data-bs-placement="top"
                     class="btn btn-primary btn-sm"
-                    href="./user/<%= item._id %>"
+                    href="/view/<%= item._id %>"
+                   
                     ><i class="bi bi-eye-fill"></i></a>
                   <a
                     data-bs-toggle="tooltip"
                     data-bs-title="edit user"
                     data-bs-placement="top"
                     class="btn btn-primary btn-sm"
-                    href="./user/edit.html"
+                    href="/edit/<%= item._id %>"
+                  
                     ><i class="bi bi-pencil"></i></a>
-                  <a
+                  <form action="/edit/<%= item._id %>?_method=DELETE" method="post"     style="display: inline;"><button
                     data-bs-toggle="tooltip"
                     data-bs-title="delete user"
                     data-bs-placement="top"
+                    class="btn btn-danger btn-sm"
                     href="./user/delete.html"
-                    ><button class="btn btn-danger btn-sm">
-                      <i class="bi bi-trash3"></i></button></a>
+                
+                    ><i class="bi bi-trash3"></i>
+                  </button></form>
                 </td>
               </tr>
             <% }) %>
