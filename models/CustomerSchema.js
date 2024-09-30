@@ -12,7 +12,7 @@ const userSchema = new Schema({
   gender:String, 
   zip: Number,
   address: String
-});
+}, { timestamps: true });
  
 const user = mongoose.model("Customer", userSchema);
  
