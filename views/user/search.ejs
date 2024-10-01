@@ -33,9 +33,72 @@
 <section class="w-100">
   <%- include('../Components/navbar.ejs')%>
 
+  
+<table
+style="width: 98%"
+class="table text-center table-striped border-secondary mx-auto table-bordered"
+>
+<thead>
+  <tr>
+    <th scope="col">Number</th>
+    <th scope="col">Name</th>
+    <th scope="col">Gender</th>
+    <th scope="col">Country</th>
+    <th scope="col">Age</th>
+    <th scope="col">Last Updated</th>
+    <th scope="col">Action</th>
+  </tr>
+</thead>
+
+<tbody>
+  <% arr.forEach((item , index) => { %>
+    <tr>
+      <th scope="row"><%= index + 1 %></th> 
+      <td><%= item.firstname %> <%= item.lastname %></td>  
+      <td><%= item.gender %></td>  
+      <td><%= item.state %></td>  
+      <td><%= item.age %></td>  
+      <td><%= moment(item.UpdatedAt).fromNow() %></td>   
+      <td>
+        <a
+          data-bs-toggle="tooltip"
+          data-bs-title="view details"
+          data-bs-placement="top"
+          class="btn btn-primary btn-sm"
+          href="/view/<%= item._id %>"
+         
+          ><i class="bi bi-eye-fill"></i></a>
+        <a
+          data-bs-toggle="tooltip"
+          data-bs-title="edit user"
+          data-bs-placement="top"
+          class="btn btn-primary btn-sm"
+          href="/edit/<%= item._id %>"
+        
+          ><i class="bi bi-pencil"></i></a>
+        <form action="/edit/<%= item._id %>?_method=DELETE" method="post"     style="display: inline;"><button
+          data-bs-toggle="tooltip"
+          data-bs-title="delete user"
+          data-bs-placement="top"
+          class="btn btn-danger btn-sm"
+          href="./user/delete.html"
+      
+          ><i class="bi bi-trash3"></i>
+        </button></form>
+      </td>
+    </tr>
+  <% }) %>
+  
+
+  
+</tbody>
+</table>
 </section>
 
+
+
 </main>
+
 <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/sidebars.js"></script></body>
 </html>
